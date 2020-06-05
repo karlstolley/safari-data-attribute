@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The &lt;data&gt; Element</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <h1>Testing the <code>&lt;data&gt;</code> element in Safari</h1>
+  <p><data id="example" value="451">The temperature of burning paper</data>.</p>
+  <script>
+    var d = document.querySelector('#example');
+    // Check for the correct constructor value
+    console.log('Constructor:', d.constructor.name) // "HTMLDataElement"
+    // Check for access to the `value` property on `HTMLDataElement`:
+    console.log('Value:', d.value) // "451"
+  </script>
+</body>
+</html>
